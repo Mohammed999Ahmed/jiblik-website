@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jiblik - Cart</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <link rel="stylesheet" href="styles/cart.css" />
+</head>
+<body>
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Jiblik Logo" />
+      </a>
+    </div>
+
+    <div class="jiblik-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search products..." id="search-input"/>
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="jiblik-header-right-section">
+      <a class="header-link" href="cart.html">
+        <img src="images/cart-icon.png" class="cart-icon" />
+        <span class="js-cart-quantity cart-quantity">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1>Your Cart</h1>
+    <div id="cart-items" class="products-grid"></div>
+
+    <div id="cart-summary">
+      <h3>Total: <span id="cart-total">$0.00</span></h3>
+      <a href="checkout.html">
+        <button>Proceed to Checkout</button>
+      </a>
+    </div>
+  </main>
+
+  <script type="module" src="scripts/cart.js"></script>
+  <script src="scripts/cart-quantity.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - Jiblik</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <style>
+    .page-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .page-container h1, h2 {
+      margin-top: 2rem;
+    }
+
+    .page-container p, li {
+      line-height: 1.6;
+    }
+
+    .page-container ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Jiblik Logo" />
+      </a>
+    </div>
+
+    <div class="jiblik-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search products..." id="search-input"/>
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="jiblik-header-right-section">
+      <a class="header-link" href="cart.html">
+        <img src="images/cart-icon.png" class="cart-icon" />
+        <span class="js-cart-quantity cart-quantity">0</span>
+      </a>
+    </div>
+  </header>
+
+<main class="main">
+  <div class="page-container">
+    <h1>Privacy Policy</h1>
+    <p>
+      At <strong>Jiblik</strong>, your privacy is important to us. We do not sell or share your personal information with third parties, except as required to fulfill your orders or comply with legal obligations.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <ul>
+      <li>Your name, email, shipping address, and phone number</li>
+      <li>Payment and order details (processed securely via third-party services)</li>
+      <li>Device and browsing behavior to improve your experience</li>
+    </ul>
+
+    <h2>How We Use Your Data</h2>
+    <ul>
+      <li>To process and deliver orders</li>
+      <li>To send order and shipping updates</li>
+      <li>To improve our website and customer service</li>
+    </ul>
+
+    <h2>Cookies</h2>
+    <p>We use cookies for cart functionality and site analytics. You can disable cookies via your browser settings, but some features may not work properly.</p>
+
+    <h2>Your Rights</h2>
+    <p>You can request access to, correction of, or deletion of your personal data by contacting us via the <a href="contact.html">Contact Us</a> page.</p>
+  </div>
+</main>
+<script src="scripts/cart-quantity.js"></script>
+
+</body>
+</html>

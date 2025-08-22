@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seller Dashboard - Jiblik</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <link rel="stylesheet" href="styles/seller.css" />
+</head>
+<body>
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html"><img src="images/logo.png" alt="Jiblik Logo" /></a>
+    </div>
+
+    <nav class="nav-bar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="seller-dashboard.html">Seller Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h1>Seller Dashboard</h1>
+
+    <form id="seller-form">
+      <input type="text" id="product-name" placeholder="Product Name" required />
+      <input type="number" id="product-price" placeholder="Price (USD)" required />
+      <input type="text" id="product-image" placeholder="Image URL" required />
+      <textarea id="product-description" placeholder="Product Description"></textarea>
+      <button type="submit">Add Product</button>
+    </form>
+
+    <h2>Your Products</h2>
+    <div id="seller-products-list"></div>
+  </main>
+
+  <script type="module" src="scripts/seller.js"></script>
+</body>
+</html>

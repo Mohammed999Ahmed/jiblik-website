@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Jiblik</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <style>
+    .about-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .about-container h1 {
+      margin-bottom: 1rem;
+    }
+
+    .about-container p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .about-container img {
+      margin: 20px auto;
+      display: block;
+      border-radius: 8px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Jiblik Logo" />
+      </a>
+    </div>
+
+    <div class="jiblik-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search products..." id="search-input"/>
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="jiblik-header-right-section">
+      <a class="header-link" href="cart.html">
+        <img src="images/cart-icon.png" class="cart-icon" />
+        <span class="js-cart-quantity cart-quantity">0</span>
+      </a>
+    </div>
+    
+  </header>
+
+  <main class="main">
+    <section class="about-container">
+      <h1>About Jiblik</h1>
+      <p><strong>Jiblik</strong> is a modern online marketplace committed to connecting people with amazing products at unbeatable prices. We believe in simplicity, quality, and putting our customers first — always.</p>
+      <p>Founded in 2025, our mission is to make online shopping fast, safe, and enjoyable for everyone across the globe. Whether you're buying the latest tech or everyday essentials, we deliver with care and speed.</p>
+      <img src="images/about-team.jpg" alt="Our Team" />
+      <p>From a small startup to a growing team, we thank you for being part of our journey. We're just getting started 🚀</p>
+    </section>
+  </main>
+  <script src="scripts/cart-quantity.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms & Conditions - Jiblik</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <style>
+    .page-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .page-container h1 {
+      margin-bottom: 1rem;
+    }
+
+    .page-container ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .page-container p, li {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Jiblik Logo" />
+      </a>
+    </div>
+
+    <div class="jiblik-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search products..." id="search-input"/>
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="jiblik-header-right-section">
+      <a class="header-link" href="cart.html">
+        <img src="images/cart-icon.png" class="cart-icon" />
+        <span class="js-cart-quantity cart-quantity">0</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-container">
+      <h1>Terms & Conditions</h1>
+      <p>By using our website, you agree to the following terms:</p>
+
+      <ul>
+        <li>Do not misuse our platform for illegal activity</li>
+        <li>Products are sold “as is” with standard manufacturer warranties</li>
+        <li>We reserve the right to modify prices and listings at any time</li>
+        <li>Any disputes will be governed by the laws of <strong>Ethiopia</strong></li>
+      </ul>
+
+      <p>These terms are subject to change. Continued use of our site constitutes acceptance of the latest version.</p>
+    </div>
+  </main>
+  <script src="scripts/cart-quantity.js"></script>
+
+</body>
+</html>

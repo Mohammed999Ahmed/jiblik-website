@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQs - Jiblik</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/jiblik-header.css" />
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-container h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    #faq-search {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question::after {
+      content: "+";
+      font-weight: bold;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: "-";
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="jiblik-header">
+    <div class="jiblik-header-left-section">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Jiblik Logo" />
+      </a>
+    </div>
+
+    <div class="jiblik-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search products..." id="search-input"/>
+      <button class="search-button" onclick="handleSearch()">Search</button>
+    </div>
+
+    <nav class="nav-bar">
+      <a href="index.html" class="nav-logo"></a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="account.html">Account</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </nav>
+
+    <div class="jiblik-header-right-section">
+      <a class="header-link" href="cart.html">
+        <img src="images/cart-icon.png" class="cart-icon" />
+        <span class="js-cart-quantity cart-quantity">0</span>
+      </a>
+    </div>
+    
+  </header>
+
+  <main class="main">
+    <section class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+
+      <input type="text" id="faq-search" placeholder="Search FAQs..." />
+
+      <div class="faq-item">
+        <div class="faq-question">📦 When will my order arrive?</div>
+        <div class="faq-answer">Most orders arrive within 3–5 business days. You can track your delivery on the <a href="tracking.html">Tracking Page</a>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">💳 What payment methods do you accept?</div>
+        <div class="faq-answer">We accept credit cards, debit cards, PayPal, and Apple Pay (where available).</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">↩️ Can I return a product?</div>
+        <div class="faq-answer">Yes, we offer hassle-free returns within 30 days. Visit our <a href="return-policy.html">Return Policy</a> page for details.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">👤 Do I need an account to order?</div>
+        <div class="faq-answer">No, you can check out as a guest. But creating an account helps you track orders and manage preferences.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">🛠 How can I contact support?</div>
+        <div class="faq-answer">Use the <a href="contact.html">Contact Us</a> form or email support@jiblik.com. We reply within 24 hours.</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Toggle collapsible answers
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // FAQ live search
+    const searchInput = document.getElementById('faq-search');
+    searchInput.addEventListener('input', function () {
+      const keyword = this.value.toLowerCase();
+      document.querySelectorAll('.faq-item').forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(keyword) ? 'block' : 'none';
+      });
+    });
+  </script>
+  <script src="scripts/cart-quantity.js"></script>
+
+</body>
+</html>
